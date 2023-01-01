@@ -1,7 +1,6 @@
 import { lazy } from "react";
 
 // use lazy for better code splitting, a.k.a. load faster
-const Dashboard = lazy(() => import("../pages/Dashboard"));
 const Overview = lazy(() => import("../pages/Overview"));
 const RFBasic = lazy(() => import("../pages/RFBasic"));
 const RFFrequency = lazy(() => import("../pages/RFFrequency"));
@@ -10,8 +9,6 @@ const RFCablesAndSplitters = lazy(() =>
 );
 const RFPathLoss = lazy(() => import("../pages/RFPathLoss"));
 const Login = lazy(() => import("../pages/LoginVersion2"));
-// const Cards = lazy(() => import("../pages/Cards"));
-// const Charts = lazy(() => import("../pages/Charts"));
 const RFTestBasic = lazy(() => import("../pages/RFTestBasic"));
 const RFTest4G = lazy(() => import("../pages/RFTest4G"));
 const RFTest5G = lazy(() => import("../pages/RFTest5G"));
@@ -21,9 +18,6 @@ const RFTestIntro = lazy(() => import("../pages/RFTestIntro"));
 const ManualTesting = lazy(() => import("../pages/ManualTesting"));
 const ATCommand = lazy(() => import("../pages/ATCommand"));
 const ADBCommand = lazy(() => import("../pages/ADBCommand"));
-
-// const Buttons = lazy(() => import("../pages/Buttons"));
-// const Modals = lazy(() => import("../pages/Modals"));
 const Page404 = lazy(() => import("../pages/404"));
 const Blank = lazy(() => import("../pages/Blank"));
 
@@ -38,10 +32,6 @@ const Blank = lazy(() => import("../pages/Blank"));
  * `routes/sidebar.js`
  */
 const routes = [
-  {
-    path: "/dashboard", // the url
-    component: Dashboard, // view rendered
-  },
   {
     path: "/overview",
     component: Overview,
