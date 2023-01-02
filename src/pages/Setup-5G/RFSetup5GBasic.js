@@ -16,7 +16,7 @@ const RFSetup5GAnritsu = () => {
           className="text-blue-500 dark:text-blue-500 hover:underline"
           to="/app/rf-setup-4g-basic"
         >
-          RF Setup Basic
+          4G RF Setup Basic
         </Link>
       </SectionContent>
 

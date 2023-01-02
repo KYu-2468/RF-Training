@@ -24,6 +24,9 @@ const RFSetup4GAnritsu = lazy(() =>
 );
 
 const RFSetup5GBasic = lazy(() => import("../pages/Setup-5G/RFSetup5GBasic"));
+const RFSetup5GKeysight = lazy(() =>
+  import("../pages/Setup-5G/RFSetup5GKeysight")
+);
 
 const ATCommand = lazy(() => import("../pages/Automation/ATCommand"));
 const ADBCommand = lazy(() => import("../pages/Automation/ADBCommand"));
@@ -106,22 +109,10 @@ const routes = [
     path: "/rf-setup-5g-basic",
     component: RFSetup5GBasic,
   },
-  // {
-  //   path: "/rf-setup-5g-keysight",
-  //   component: RFSetup4G,
-  // },
-  // {
-  //   path: "/rf-setup-5g",
-  //   component: Modals,
-  // },
-  // {
-  //   path: "/rf-automation",
-  //   component: Tables,
-  // },
-  // {
-  //   path: "/automation-basic",
-  //   component: Tables,
-  // },
+  {
+    path: "/rf-setup-5g-keysight",
+    component: RFSetup5GKeysight,
+  },
   {
     path: "/at-automation",
     component: ATCommand,
