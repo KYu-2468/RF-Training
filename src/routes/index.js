@@ -1,23 +1,33 @@
 import { lazy } from "react";
 
 // use lazy for better code splitting, a.k.a. load faster
+const Login = lazy(() => import("../pages/Login"));
 const Overview = lazy(() => import("../pages/Overview"));
-const RFBasic = lazy(() => import("../pages/RFBasic"));
-const RFFrequency = lazy(() => import("../pages/RFFrequency"));
+
+const RFBasic = lazy(() => import("../pages/RF-Basic/RFBasic"));
+const RFFrequency = lazy(() => import("../pages/RF-Basic/RFFrequency"));
 const RFCablesAndSplitters = lazy(() =>
-  import("../pages/RFCablesAndSplitters")
+  import("../pages/RF-Basic/RFCablesAndSplitters")
 );
-const RFPathLoss = lazy(() => import("../pages/RFPathLoss"));
-const Login = lazy(() => import("../pages/LoginVersion2"));
-const RFTestBasic = lazy(() => import("../pages/RFTestBasic"));
-const RFTest4G = lazy(() => import("../pages/RFTest4G"));
-const RFTest5G = lazy(() => import("../pages/RFTest5G"));
-const RFSetupBasic = lazy(() => import("../pages/RFSetupBasic"));
-const RFSetup4G = lazy(() => import("../pages/RFSetup4G"));
-const RFTestIntro = lazy(() => import("../pages/RFTestIntro"));
-const ManualTesting = lazy(() => import("../pages/ManualTesting"));
-const ATCommand = lazy(() => import("../pages/ATCommand"));
-const ADBCommand = lazy(() => import("../pages/ADBCommand"));
+const RFPathLoss = lazy(() => import("../pages/RF-Basic/RFPathLoss"));
+
+const RFTestIntro = lazy(() => import("../pages/RF-Tests/RFTestIntro"));
+const RFTestBasic = lazy(() => import("../pages/RF-Tests/RFTestBasic"));
+const RFTest4G = lazy(() => import("../pages/RF-Tests/RFTest4G"));
+const RFTest5G = lazy(() => import("../pages/RF-Tests/RFTest5G"));
+
+const RFSetupIntro = lazy(() => import("../pages/Setup-4G/RFSetupIntro"));
+const RFSetup4GBasic = lazy(() => import("../pages/Setup-4G/RFSetup4GBasic"));
+const RFSetup4GRnS = lazy(() => import("../pages/Setup-4G/RFSetup4GRnS"));
+const RFSetup4GAnritsu = lazy(() =>
+  import("../pages/Setup-4G/RFSetup4GAnritsu")
+);
+
+const RFSetup5GBasic = lazy(() => import("../pages/Setup-5G/RFSetup5GBasic"));
+
+const ATCommand = lazy(() => import("../pages/Automation/ATCommand"));
+const ADBCommand = lazy(() => import("../pages/Automation/ADBCommand"));
+
 const Page404 = lazy(() => import("../pages/404"));
 const Blank = lazy(() => import("../pages/Blank"));
 
@@ -77,21 +87,29 @@ const routes = [
     component: RFTest5G,
   },
   {
-    path: "/rf-setup-basic",
-    component: RFSetupBasic,
+    path: "/rf-setup-intro",
+    component: RFSetupIntro,
+  },
+  {
+    path: "/rf-setup-4g-basic",
+    component: RFSetup4GBasic,
   },
   {
     path: "/rf-setup-4g-anritsu",
-    component: RFSetup4G,
+    component: RFSetup4GAnritsu,
   },
   {
     path: "/rf-setup-4g-rns",
-    component: RFSetup4G,
+    component: RFSetup4GRnS,
   },
   {
-    path: "/rf-setup-5g-keysight",
-    component: RFSetup4G,
+    path: "/rf-setup-5g-basic",
+    component: RFSetup5GBasic,
   },
+  // {
+  //   path: "/rf-setup-5g-keysight",
+  //   component: RFSetup4G,
+  // },
   // {
   //   path: "/rf-setup-5g",
   //   component: Modals,
@@ -104,10 +122,6 @@ const routes = [
   //   path: "/automation-basic",
   //   component: Tables,
   // },
-  {
-    path: "/manual-testing",
-    component: ManualTesting,
-  },
   {
     path: "/at-automation",
     component: ATCommand,

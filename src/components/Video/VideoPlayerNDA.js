@@ -3,14 +3,16 @@ import React, { useState, useEffect } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth, getFileURL } from "../../firebase";
 
-import PageTitle from "../Typography/PageTitle";
+import SectionContent from "../Typography/SectionContent";
 
 import ReactPlayer from "react-player/lazy";
 
+import { useMediaQuery } from "react-responsive";
+
 const VideoPlayerNDA = ({ src }) => {
-  const videoTailwindStyle = "w-80 h-fit sm:w-5/6";
   const [user] = useAuthState(auth);
   const [url, setURL] = useState("");
+  const [videoStyle, setVideoStyle] = useState({});
 
   useEffect(() => {
     if (!user) return;
@@ -21,20 +23,45 @@ const VideoPlayerNDA = ({ src }) => {
     })();
   }, [user, src]);
 
+  const isXLargeScreen = useMediaQuery({
+    query: "(min-width: 1300px)",
+  });
+
+  const isLargeScreen = useMediaQuery({
+    query: "(min-width: 1000px)",
+  });
+
+  const isMidScreen = useMediaQuery({
+    query: "(min-width: 800px)",
+  });
+
+  useEffect(() => {
+    if (isXLargeScreen) {
+      setVideoStyle({ width: "1000", height: "567" });
+    } else if (isLargeScreen) {
+      setVideoStyle({ width: "700", height: "397" });
+    } else if (isMidScreen) {
+      setVideoStyle({ width: "500", height: "283" });
+    } else {
+      setVideoStyle({ width: "300", height: "170" });
+    }
+  }, [isMidScreen, isLargeScreen, isXLargeScreen]);
+
   if (!user || !url) {
     return (
       <>
-        <PageTitle>
-          You do not have access to the remaining resource. Please login with
-          the SGS account!
-        </PageTitle>
+        <SectionContent>
+          <div className="text-red-500 font-bold">
+            You do not have access to the remaining resource.
+            <br />
+            Please login with the SGS account!
+          </div>
+        </SectionContent>
       </>
     );
   }
 
-  return (
-    <ReactPlayer className={videoTailwindStyle} url={url} controls={true} />
-  );
+  return <ReactPlayer {...videoStyle} url={url} controls={true} />;
 };
 
 export default VideoPlayerNDA;
