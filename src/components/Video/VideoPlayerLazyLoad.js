@@ -9,7 +9,7 @@ const VideoPlayerLazyLoad = ({ video }) => {
   const [videoStyle, setVideoStyle] = useState({});
 
   const isDesktopOrLaptop = useMediaQuery({
-    query: "(min-width: 1200px)",
+    query: "(min-width: 1400px)",
   });
 
   const isTablet = useMediaQuery({
@@ -26,7 +26,7 @@ const VideoPlayerLazyLoad = ({ video }) => {
     }
   }, [isDesktopOrLaptop, isTablet]);
 
-  return <ReactPlayer url={fullURL} controls={true} {...videoStyle} />;
+  return <ReactPlayer {...videoStyle} url={fullURL} controls={true} />;
 };
 
 export default VideoPlayerLazyLoad;

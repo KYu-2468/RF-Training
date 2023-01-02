@@ -95,16 +95,20 @@ const routes = [
     routes: [
       // submenu
       {
-        path: "/app/rf-setup-basic",
-        name: "1 - RF Setup Basic",
+        path: "/app/rf-setup-intro",
+        name: "1 - RF Setup Intro",
+      },
+      {
+        path: "/app/rf-setup-4g-basic",
+        name: "2 - RF Setup Basic",
       },
       {
         path: "/app/rf-setup-4g-anritsu",
-        name: "2 - TP104 / TP149 Anritsu",
+        name: "3 - TP104 / TP149 Anritsu",
       },
       {
         path: "/app/rf-setup-4g-rns",
-        name: "3 - TP098 Rohde & Schwarz",
+        name: "4 - TP098 Rohde & Schwarz",
       },
     ],
   },
@@ -115,7 +119,7 @@ const routes = [
     routes: [
       // submenu
       {
-        path: "/app/rf-setup-basic",
+        path: "/app/rf-setup-5g-basic",
         name: "1 - RF Setup Basic",
       },
       {

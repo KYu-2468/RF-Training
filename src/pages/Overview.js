@@ -1,33 +1,23 @@
 import React from "react";
 
 import PageTitle from "../components/Typography/PageTitle";
+import SectionContent from "../components/Typography/SectionContent";
 
-import VideoPlayer from "../components/Video/VideoPlayerLazyLoad";
 import VideoPlayerNDA from "../components/Video/VideoPlayerNDA";
+import YoutubeVideo from "../components/Video/YoutubeVideo";
 
 function Overview() {
   return (
     <>
-      <div
-        className="text-red-900
-      text-2xl"
-      >
-        Test
-      </div>
-      <PageTitle
-        className="text-red-900 
-        hover:bg-black"
-      >
-        Overview
-      </PageTitle>
-      <div>
-        <VideoPlayer video="Intro-to-industry.mp4" />
-      </div>
+      <PageTitle>Overview</PageTitle>
+      <SectionContent>
+        <YoutubeVideo videoId="QwtbbrazL-8" />
+      </SectionContent>
 
       <PageTitle>Testing Overview</PageTitle>
-      <div>
+      <SectionContent>
         <VideoPlayerNDA src="rf-overview.mp4" />
-      </div>
+      </SectionContent>
     </>
   );
 }
