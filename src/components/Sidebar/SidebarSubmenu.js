@@ -1,25 +1,25 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
-import { DropdownIcon } from '../../icons'
-import * as Icons from '../../icons'
-import { Transition } from '@windmill/react-ui'
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { DropdownIcon } from "../../icons";
+import * as Icons from "../../icons";
+import { Transition } from "@windmill/react-ui";
 
 function Icon({ icon, ...props }) {
-  const Icon = Icons[icon]
-  return <Icon {...props} />
+  const Icon = Icons[icon];
+  return <Icon {...props} />;
 }
 
 function SidebarSubmenu({ route }) {
-  const [isDropdownMenuOpen, setIsDropdownMenuOpen] = useState(false)
+  const [isDropdownMenuOpen, setIsDropdownMenuOpen] = useState(false);
 
   function handleDropdownMenuClick() {
-    setIsDropdownMenuOpen(!isDropdownMenuOpen)
+    setIsDropdownMenuOpen(!isDropdownMenuOpen);
   }
 
   return (
     <li className="relative px-6 py-3" key={route.name}>
       <button
-        className="inline-flex items-center justify-between w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
+        className="inline-flex items-center justify-between w-full text-xl font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
         onClick={handleDropdownMenuClick}
         aria-haspopup="true"
       >
@@ -39,7 +39,7 @@ function SidebarSubmenu({ route }) {
         leaveTo="opacity-0 max-h-0"
       >
         <ul
-          className="p-2 mt-2 space-y-2 overflow-hidden text-sm font-medium text-gray-500 rounded-md shadow-inner bg-gray-50 dark:text-gray-400 dark:bg-gray-900"
+          className="p-2 mt-2 space-y-2 overflow-hidden text-lg font-medium text-gray-500 rounded-md shadow-inner bg-gray-50 dark:text-gray-400 dark:bg-gray-900"
           aria-label="submenu"
         >
           {route.routes.map((r) => (
@@ -55,7 +55,7 @@ function SidebarSubmenu({ route }) {
         </ul>
       </Transition>
     </li>
-  )
+  );
 }
 
-export default SidebarSubmenu
+export default SidebarSubmenu;

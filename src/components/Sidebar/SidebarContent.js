@@ -1,10 +1,21 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from "react";
+import React, { useContext } from "react";
 import routes from "../../routes/sidebar";
 import { NavLink, Route } from "react-router-dom";
 import * as Icons from "../../icons";
 import SidebarSubmenu from "./SidebarSubmenu";
 // import { Button } from "@windmill/react-ui";  KY comment
+
+import { SidebarContext } from "../../context/SidebarContext";
+import { MoonIcon, SunIcon, MenuIcon } from "../../icons";
+import {
+  // Avatar,
+  // Badge,
+  // Input,
+  // Dropdown,
+  // DropdownItem,
+  WindmillContext,
+} from "@windmill/react-ui";
 
 function Icon({ icon, ...props }) {
   const Icon = Icons[icon];
@@ -12,14 +23,42 @@ function Icon({ icon, ...props }) {
 }
 
 function SidebarContent() {
+  const { mode, toggleMode } = useContext(WindmillContext);
+  const { toggleSidebar } = useContext(SidebarContext);
   return (
     <div className="py-4 text-gray-500 dark:text-gray-400">
-      <a
-        className="ml-6 text-lg font-bold text-gray-800 dark:text-gray-200"
-        href="#"
-      >
-        RF Training SGS
-      </a>
+      <div className="flex flex-no-wrap justify-around">
+        <a
+          className="ml-6 text-2xl font-bold text-gray-800 dark:text-gray-200"
+          href="#"
+        >
+          RF Training SGS
+        </a>
+        <button
+          className="p-1 mr-5 -ml-1 rounded-md lg:hidden focus:outline-none focus:shadow-outline-purple"
+          onClick={toggleSidebar}
+          aria-label="Menu"
+        >
+          <MenuIcon className="w-6 h-6" aria-hidden="true" />
+        </button>
+        <ul className="flex items-center flex-shrink-0 space-x-6">
+          {/* <!-- Theme toggler --> */}
+          <li className="flex">
+            <button
+              className="rounded-md focus:outline-none focus:shadow-outline-purple"
+              onClick={toggleMode}
+              aria-label="Toggle color mode"
+            >
+              {mode === "dark" ? (
+                <SunIcon className="w-6 h-6" aria-hidden="true" />
+              ) : (
+                <MoonIcon className="w-6 h-6" aria-hidden="true" />
+              )}
+            </button>
+          </li>
+        </ul>
+      </div>
+
       <ul className="mt-6">
         {routes.map((route) =>
           route.routes ? (
@@ -29,7 +68,7 @@ function SidebarContent() {
               <NavLink
                 exact
                 to={route.path}
-                className="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
+                className="inline-flex items-center w-full text-xl font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
                 activeClassName="text-gray-800 dark:text-gray-100"
               >
                 <Route path={route.path} exact={route.exact}>

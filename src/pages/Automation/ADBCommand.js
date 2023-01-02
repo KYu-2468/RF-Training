@@ -1,5 +1,7 @@
 import React from "react";
 import PageTitle from "../../components/Typography/PageTitle";
+import SectionContent from "../../components/Typography/SectionContent";
+
 import VideoPlayerNDA from "../../components/Video/VideoPlayerNDA";
 
 const ADBCommand = () => {
@@ -20,13 +22,13 @@ const ADBCommand = () => {
   return (
     <>
       <PageTitle>ADB Commands</PageTitle>
-      <div className="my-6 text-2xl">
+      <SectionContent>
         ADB {"(Android Debug Bridge)"}
         <a className="text-blue-700" href={M2M_SUPPORT_URL}>
           here
         </a>
-      </div>
-      <div className="my-6 text-2xl">
+      </SectionContent>
+      <SectionContent>
         Common AT commands:
         <ul>
           <li>
@@ -50,7 +52,7 @@ const ADBCommand = () => {
             </a>
           </li>
         </ul>
-      </div>
+      </SectionContent>
       <VideoPlayerNDA src="at-command-example.mp4" />
     </>
   );
