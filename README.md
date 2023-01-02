@@ -2,7 +2,7 @@
 
 <p align="center">
     <a href="https://rf-training-sgs.web.app/">
-      <img alt="RF Training GIF" width="600" src=".github/rf-training.gif">
+      <img alt="RF Training Video" width="600" src=".github/rf-training.gif">
     </a><br>
 </p>
 

@@ -3,7 +3,6 @@ import React from "react";
 import PageTitle from "../components/Typography/PageTitle";
 import SectionContent from "../components/Typography/SectionContent";
 
-import VideoPlayerNDA from "../components/Video/VideoPlayerNDA";
 import YoutubeVideo from "../components/Video/YoutubeVideo";
 
 function Overview() {
@@ -16,7 +15,7 @@ function Overview() {
 
       <PageTitle>Testing Overview</PageTitle>
       <SectionContent>
-        <VideoPlayerNDA src="rf-overview.mp4" />
+        <YoutubeVideo videoId="DvIU7ilYBK0" />
       </SectionContent>
     </>
   );
