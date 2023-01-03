@@ -1,9 +1,20 @@
 # RF Training SGS
 
 <p align="center">
-    <a href="https://rf-training-sgs.web.app/">
-      <img alt="RF Training Video" width="600" src=".github/rf-training.gif">
-    </a><br>
+  <h2>Sign in with Firebase Authentication</h2>
+  <a href="https://rf-training-sgs.web.app/">
+    <img alt="RF Training Video" width="600" src=".github/rf-training.gif">
+  </a>
+
+  <h2 style="margin-top: 10px">Protect sensitive information with Firebase Security Rules</h2>
+  <a href="https://rf-training-sgs.web.app/">
+    <img alt="RF Training Video" width="600" src=".github/security.gif">
+  </a>
+
+  <h2 style="margin-top: 10px">Start Learning RF Testing</h2>
+  <a href="https://rf-training-sgs.web.app/">
+    <img alt="RF Training Video" width="600" src=".github/learning.gif">
+  </a>
 </p>
 
 🚀 [See it live](https://rf-training-sgs.web.app/)
