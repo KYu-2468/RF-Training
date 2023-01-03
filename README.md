@@ -3,7 +3,7 @@
 <p align="center">
   <h2>Sign in with Firebase Authentication</h2>
   <a href="https://rf-training-sgs.web.app/">
-    <img alt="RF Training Video" width="600" src=".github/rf-training.gif">
+    <img alt="RF Training Video" width="600" src=".github/login.gif">
   </a>
 
   <h2 style="margin-top: 10px">Protect sensitive information with Firebase Security Rules</h2>
