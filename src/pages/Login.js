@@ -44,7 +44,12 @@ const Login = () => {
           <LogOutBtn logout={logout} />
         </div>
 
-        <video className="w-screen fixed top-0 left-0 -z-10" autoPlay loop>
+        <video
+          className="w-screen fixed top-0 left-0 -z-10"
+          autoPlay
+          loop
+          muted
+        >
           <source src={background} type="video/mp4" />
         </video>
       </>
@@ -53,7 +58,7 @@ const Login = () => {
 
   return (
     <>
-      <video className="w-screen fixed top-0 left-0 z-0" autoPlay loop>
+      <video className="w-screen fixed top-0 left-0 z-0" autoPlay loop muted>
         <source src={background} type="video/mp4" />
       </video>
       <div id="firebaseui-auth-container" className="my-32" />
