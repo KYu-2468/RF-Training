@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useMediaQuery } from "react-responsive";
 
-const Image = ({ src, alt }) => {
+const Image = ({ src, alt, ...args }) => {
   const [imageStyle, setImageStyle] = useState({});
 
   const isDesktopOrLaptop = useMediaQuery({
@@ -22,7 +22,7 @@ const Image = ({ src, alt }) => {
     }
   }, [isDesktopOrLaptop, isTablet]);
 
-  return <img src={src} alt={alt} {...imageStyle} />;
+  return <img src={src} alt={alt} {...imageStyle} {...args} />;
 };
 
 export default Image;

@@ -29,26 +29,16 @@ const ADBCommand = () => {
         </a>
       </SectionContent>
       <SectionContent>
-        Common AT commands:
+        Common ADB commands:
         <ul>
           <li>
             <a className="text-blue-700" href={AT_CFUN_URL}>
-              AT+CFUN
+              adb devices
             </a>{" "}
           </li>
           <li>
             <a className="text-blue-700" href={AT_CPIN_URL}>
-              AT+CPIN
-            </a>
-          </li>
-          <li>
-            <a className="text-blue-700" href={AT_CGDCONT_URL}>
-              AT+CGDCONT
-            </a>
-          </li>
-          <li>
-            <a className="text-blue-700" href={AT_COPS_URL}>
-              AT+COPS
+              adb reboot
             </a>
           </li>
         </ul>

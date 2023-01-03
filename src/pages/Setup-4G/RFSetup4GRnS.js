@@ -27,27 +27,27 @@ const RFSetup4GRnS = () => {
 
       <PageTitle>Adding Test Cases</PageTitle>
       <SectionContent>
-        <VideoPlayerNDA src="rf-system-setup-4g-anritsu.mp4" />
+        <VideoPlayerNDA src="rf-system-setup-4g-rns.mp4" />
       </SectionContent>
 
       <PageTitle>EUT Setup</PageTitle>
       <SectionContent>
-        <VideoPlayerNDA src="rf-system-setup-4g-anritsu.mp4" />
+        <VideoPlayerNDA src="rf-system-setup-4g-rns.mp4" />
       </SectionContent>
 
       <PageTitle>Cable Loss Setup</PageTitle>
       <SectionContent>
-        <VideoPlayerNDA src="rf-system-setup-4g-anritsu.mp4" />
+        <VideoPlayerNDA src="rf-system-setup-4g-rns.mp4" />
       </SectionContent>
 
       <PageTitle>Automation Setup</PageTitle>
       <SectionContent>
-        <VideoPlayerNDA src="rf-system-setup-4g-anritsu.mp4" />
+        <VideoPlayerNDA src="rf-system-setup-4g-rns.mp4" />
       </SectionContent>
 
       <PageTitle>Test Case Setup</PageTitle>
       <SectionContent>
-        <VideoPlayerNDA src="rf-system-setup-4g-anritsu.mp4" />
+        <VideoPlayerNDA src="rf-system-setup-4g-rns.mp4" />
       </SectionContent>
     </>
   );

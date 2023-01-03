@@ -31,6 +31,7 @@ const RFSetup5GKeysight = lazy(() =>
 const ATCommand = lazy(() => import("../pages/Automation/ATCommand"));
 const ADBCommand = lazy(() => import("../pages/Automation/ADBCommand"));
 
+const Debugging = lazy(() => import("../pages/Debug"));
 const Page404 = lazy(() => import("../pages/404"));
 const Blank = lazy(() => import("../pages/Blank"));
 
@@ -121,14 +122,10 @@ const routes = [
     path: "/adb-automation",
     component: ADBCommand,
   },
-  // {
-  //   path: "/power-automation",
-  //   component: Tables,
-  // },
-  // {
-  //   path: "/debugging",
-  //   component: Tables,
-  // },
+  {
+    path: "/debugging",
+    component: Debugging,
+  },
   {
     path: "/login",
     component: Login,

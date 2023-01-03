@@ -10,6 +10,7 @@ import phone1 from "../../assets/img/phone-1.png";
 import smaAdapters from "../../assets/img/sma-adapter.jpeg";
 
 const RFCablesAndSplitters = () => {
+  const imageStyle = { width: "650", height: "366" };
   return (
     <>
       <PageTitle>RF Cables and Splitters</PageTitle>
@@ -20,7 +21,7 @@ const RFCablesAndSplitters = () => {
           RF cables connect the device, usually a phone, to the system
           ports/cables
         </div>
-        <Image src={rfCables} alt="RF cables" />
+        <Image src={rfCables} alt="RF cables" {...imageStyle} />
       </SectionContent>
 
       <PageTitle>Cables/Pigtails connected to Device</PageTitle>
@@ -29,12 +30,12 @@ const RFCablesAndSplitters = () => {
           Once the tip of the RF cables are connected to the device, we can
           connect the tail to the system ports/cables
         </div>
-        <Image src={phone1} alt="Phone" />
+        <Image src={phone1} alt="Phone" {...imageStyle} />
       </SectionContent>
 
       <PageTitle>SMA Adapters</PageTitle>
       <SectionContent>
-        <Image src={smaAdapters} alt="SMA Adapters" />
+        <Image src={smaAdapters} alt="SMA Adapters" {...imageStyle} />
       </SectionContent>
 
       <PageTitle>Splitters/Combiners</PageTitle>
@@ -45,7 +46,7 @@ const RFCablesAndSplitters = () => {
           split one signal into two signals and/or combine two signals into one
           signal
         </div>
-        <Image src={rfSplitters} alt="RF Splitters" />
+        <Image src={rfSplitters} alt="RF Splitters" {...imageStyle} />
       </SectionContent>
     </>
   );

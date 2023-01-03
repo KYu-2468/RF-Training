@@ -13,7 +13,7 @@ const NR_FREQUENCY_URL = "https://en.wikipedia.org/wiki/5G_NR_frequency_bands";
 const RFFrequency = () => {
   return (
     <>
-      <PageTitle>RF Frequency</PageTitle>
+      <PageTitle>RF Frequency Bands</PageTitle>
 
       <PageTitle>
         <a href={LTE_FREQUENCY_URL}>
