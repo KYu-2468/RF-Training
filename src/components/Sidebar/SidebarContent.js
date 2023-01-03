@@ -6,8 +6,7 @@ import * as Icons from "../../icons";
 import SidebarSubmenu from "./SidebarSubmenu";
 // import { Button } from "@windmill/react-ui";  KY comment
 
-import { SidebarContext } from "../../context/SidebarContext";
-import { MoonIcon, SunIcon, MenuIcon } from "../../icons";
+import { MoonIcon, SunIcon } from "../../icons";
 import {
   // Avatar,
   // Badge,
@@ -24,24 +23,17 @@ function Icon({ icon, ...props }) {
 
 function SidebarContent() {
   const { mode, toggleMode } = useContext(WindmillContext);
-  const { toggleSidebar } = useContext(SidebarContext);
+
   return (
     <div className="py-4 text-gray-500 dark:text-gray-400">
       <div className="flex flex-no-wrap justify-around">
         <a
-          className="ml-6 text-2xl font-bold text-gray-800 dark:text-gray-200"
+          className="ml-6 mr-8 text-2xl font-bold text-gray-800 dark:text-gray-200"
           href="#"
         >
           RF Training SGS
         </a>
-        <button
-          className="p-1 mr-5 -ml-1 rounded-md lg:hidden focus:outline-none focus:shadow-outline-purple"
-          onClick={toggleSidebar}
-          aria-label="Menu"
-        >
-          <MenuIcon className="w-6 h-6" aria-hidden="true" />
-        </button>
-        <ul className="flex items-center flex-shrink-0 space-x-6">
+        <ul className="flex items-center flex-shrink-0 space-x-6 mr-6">
           {/* <!-- Theme toggler --> */}
           <li className="flex">
             <button

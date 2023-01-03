@@ -28,7 +28,7 @@ const routes = [
       },
       {
         path: "/app/rf-frequency",
-        name: "2 - RF Frequency",
+        name: "2 - RF Frequency (Bands)",
       },
       {
         path: "/app/rf-cables-splitters",
@@ -82,10 +82,10 @@ const routes = [
         path: "/app/adb-automation",
         name: "2 - ADB Automation",
       },
-      {
-        path: "/app/power-automation",
-        name: "3 - Power Automation",
-      },
+      // {
+      //   path: "/app/power-automation",
+      //   name: "3 - Power Automation",
+      // },
     ],
   },
   {
@@ -135,7 +135,7 @@ const routes = [
   {
     path: "/app/debugging",
     icon: "ModalsIcon",
-    name: "Debug",
+    name: "Debug & Logs",
   },
   {
     path: "/app/login",

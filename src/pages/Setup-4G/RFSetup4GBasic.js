@@ -63,6 +63,8 @@ const RFSetup4GBasic = () => {
       </SectionContent>
       <SectionContent>
         <Image src={rfSystemPort} alt="" />
+      </SectionContent>
+      <SectionContent>
         <VideoPlayerNDA src="rf-cable-setup-4g.mp4" />
       </SectionContent>
     </>

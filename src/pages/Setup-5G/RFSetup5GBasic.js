@@ -16,13 +16,13 @@ const RFSetup5GAnritsu = () => {
           className="text-blue-500 dark:text-blue-500 hover:underline"
           to="/app/rf-setup-4g-basic"
         >
-          4G RF Setup Basic
+          5G RF Setup Basic
         </Link>
       </SectionContent>
 
-      <PageTitle>Anritsu Setup {"(TP104 / TP149)"}</PageTitle>
+      <PageTitle>5G Example Device RF Port Map</PageTitle>
       <SectionContent>
-        <VideoPlayerNDA src="rf-system-setup-4g-anritsu.mp4" />
+        <VideoPlayerNDA src="" />
       </SectionContent>
     </>
   );
